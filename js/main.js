@@ -35,30 +35,59 @@ function verifyInputs(input) {
     return true;
 }
 
-function parseStuStorage(str) {
-    
-}
 
 function add() {
-    let temp = localStorage.getItem("students");
-    let dataForm = document.getElementById('inputData');
-    let stuData = new Student(dataForm.elements[0].value, dataForm.elements[1].value, dataForm.elements[2].value,
-        dataForm.elements[3].value, parseFloat(dataForm.elements[4].value), parseFloat(dataForm.elements[5].value), parseFloat(dataForm.elements[6].value),
-        parseFloat(dataForm.elements[7].value));
-    if (!verifyInputs(stuData)) {
+    let stuData = new Student($('#inputName').val(), $('#inputId').val(), $('#inputNational').val(),
+        $('#inputKlass').val(), parseFloat($('#inputMath').val()), parseFloat($('#inputChinese').val()), parseFloat($('#inputEnglish').val()),
+        parseFloat($('#inputCode').val()));
+    if (verifyInputs(stuData) !== true) {
         alert('输入有误，请重新输入！');
     }
-    if (!temp) {
+    if (localStorage.getItem("students") === null) {
         let students = [];
         students.push(stuData);
-        localStorage.setItem("students", students.toString());
+        localStorage.setItem("students", JSON.stringify(students));
+        alert('添加成功');
     } else {
-        
+        let students = JSON.parse(localStorage.getItem('students'));
+        localStorage.removeItem('students');
+        students.push(stuData);
+        localStorage.setItem("students", JSON.stringify(students));
+        alert('添加成功');
+    }
+    console.log(localStorage.getItem("students"));
+    window.location.reload();
+}
+
+function dataDisplay() {
+    if (localStorage.getItem("students") === null) {
+        // language=HTML
+        $('#stuDataBody').append("<tr><td colspan='10' class='text-center' id ='zanwu'>暂无数据</td></tr>");
+    } else {
+        $('#stuDataBody tr').remove();
+        let students = JSON.parse(localStorage.getItem('students'));
+        students.map(function (obj) {
+            let tr = $('#stuDataBody').append(document.createElement('tr'));
+            tr.addClass('text-center');
+            for(let i in obj){
+                if(i !== 'national'){
+                    let val = document.createElement('td');
+                    val.innerText = obj[i];
+                    tr.append(val);
+                }
+            }
+            let del = document.createElement("td");
+            del.innerHTML = "<button class='btn btn-warning'>"+"删除"+"</button>";
+            tr.append(del);
+        });
+
+
     }
 }
 
-// function main() {
-//     document.getElementById('storeStu').addEventListener('click',add);
-// }
+function main() {
+    dataDisplay();
+    $('#storeStu').click(add);
+}
 
-// main();
+main();

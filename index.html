@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/custom.css">
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.js"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
 
@@ -125,7 +124,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" id="storeStu" onclick="add()">保存</button>
+                <button type="button" class="btn btn-primary" id="storeStu">保存</button>
             </div>
         </div>
     </div>
@@ -162,22 +161,22 @@
         <caption class="h4 text-center">成绩表单</caption>
         <thead>
         <tr>
-            <th>姓名</th>
-            <th>学号</th>
-            <th>班级</th>
-            <th>语文</th>
-            <th>数学</th>
-            <th>英语</th>
-            <th>编程</th>
-            <th>总分</th>
-            <th>平均分</th>
-            <th>操作</th>
+            <th class="text-center">姓名</th>
+            <th class="text-center">学号</th>
+            <th class="text-center">班级</th>
+            <th class="text-center">语文</th>
+            <th class="text-center">数学</th>
+            <th class="text-center" id="english_th">英语</th>
+            <th class="text-center">编程</th>
+            <th class="text-center">总分</th>
+            <th class="text-center">平均分</th>
+            <th class="text-center">操作</th>
         </tr>
         </thead>
         <tbody id="stuDataBody">
-        <tr>
-            <td colspan="10" class="text-center">暂无数据</td>
-        </tr>
+        <!--<tr>-->
+        <!--<td colspan="10" class="text-center">暂无数据</td>-->
+        <!--</tr>-->
         </tbody>
         <tfoot>
         <tr>
@@ -189,5 +188,6 @@
         </tfoot>
     </table>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>
