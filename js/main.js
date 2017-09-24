@@ -1,3 +1,5 @@
+let StuID = "";
+
 class Student {
     constructor(name, id, national, klass, math = 0, chinese = 0, english = 0, code = 0) {
         this.name = name;
@@ -102,7 +104,7 @@ function dataDisplay(aver, median) {
                 }
             }
             let modify = document.createElement("td");
-            modify.innerHTML = "<button class='btn btn-warning tableButton'>" + "修改" + "</button>" + "<button class='btn btn-danger'>" + "删除" + "</button>";
+            modify.innerHTML = "<button class='btn btn-warning tableButton' data-target='#modifyData' data-toggle='modal'>" + "修改" + "</button>" + "<button class='btn btn-danger'>" + "删除" + "</button>";
             tr.append(modify);
         });
         $('#Aver').after("<td colspan='2' class='text-center'>" + aver + "</td>");
@@ -110,10 +112,51 @@ function dataDisplay(aver, median) {
     }
 }
 
+function modifyDataDisplay(tar) {
+    let students = JSON.parse(localStorage.getItem('students'));
+    let tarID = tar.parentElement.parentElement.children[1].innerText;
+    StuID = tarID;
+    let modifyNo = 0;
+    students.forEach(function (obj, index) {
+        if (obj.id === tarID) {
+            modifyNo = index;
+            $('#modifyName').val(obj.name);
+            $('#modifyId').val(obj.id);
+            $('#modifyNational').val(obj.national);
+            $('#modifyKlass').val(obj.klass);
+            $('#modifyMath').val(obj.math);
+            $('#modifyChinese').val(obj.chinese);
+            $('#modifyEnglish').val(obj.english);
+            $('#modifyCode').val(obj.code);
+        }
+    });
+}
+
+function modify() {
+    let students = JSON.parse(localStorage.getItem('students'));
+    let tarID = StuID;
+    let modifyNo = 0;
+    students.forEach(function (obj, index) {
+        if (obj.id === tarID) {
+            modifyNo = index;
+        }
+    });
+    localStorage.removeItem('students');
+    let newStudent = new Student($('#modifyName').val(), $('#modifyId').val(), $('#modifyNational').val(),
+        $('#modifyKlass').val(), parseFloat($('#modifyMath').val()), parseFloat($('#modifyChinese').val()), parseFloat($('#modifyEnglish').val()),
+        parseFloat($('#modifyCode').val()));
+    if (verifyInputs(newStudent) !== true) {
+        alert('输入有误，请重新输入！');
+    }
+    students[modifyNo] = newStudent;
+    localStorage.setItem("students", JSON.stringify(students));
+    window.location.reload();
+}
+
 function delData(tar) {
     let students = JSON.parse(localStorage.getItem('students'));
     let tarID = tar.parentElement.parentElement.children[1].innerText;
-    let message = confirm('警告：确定要删除,学号为' + tarID + '的同学的数据吗？');
+    let message = confirm('警告：确定要删除学号为' + tarID + '的同学的数据吗？');
     if (message) {
         localStorage.removeItem('students');
         let delNo = 0;
@@ -146,6 +189,12 @@ function main() {
             delData(event.target);
         }
     });
+    $('#stuDataBody').on("click", function (event) {
+        if (event.target && event.target.nodeName === "BUTTON" && event.target.className === "btn btn-warning tableButton") {
+            modifyDataDisplay(event.target);
+        }
+    });
+    $('#modifyStu').click(modify);
 }
 
 main();
