@@ -175,6 +175,47 @@ function delData(tar) {
     }
 }
 
+function verifyId(str) {
+    const reg1 = /([0-9]\d*,)*[0-9]\d*$/;
+    const reg2 = /[0-9]\d*/;
+    return reg1.test(str) || reg2.test(str);
+}
+
+function queryData() {
+    let stuStr = $('#inputStuId').val();
+    let arr = stuStr.split(',');
+    let students = JSON.parse(localStorage.getItem('students'));
+    let queryStudents = [];
+    for(let obj of students){
+        for(let value of arr){
+            if(obj.id === value){
+                queryStudents.push(obj);
+            }
+        }
+    }
+    $('#stuDataBody tr').remove();
+    $('#stuDataBody').before("<tbody><td colspan='10' class='text-center'>以下为查询结果</td></tbody>");
+    queryStudents.map(function (obj, index) {
+        $('#stuDataBody').append("<tr></tr>").addClass('text-center');
+        let tr = $('#stuDataBody > tr')[index];
+        for (let i in obj) {
+            if (i !== 'national') {
+                let val = document.createElement('td');
+                val.innerText = obj[i];
+                tr.append(val);
+            }
+        }
+        let modify = document.createElement("td");
+        modify.innerHTML = "<button class='btn btn-warning tableButton' data-target='#modifyData' data-toggle='modal'>" + "修改" + "</button>" + "<button class='btn btn-danger'>" + "删除" + "</button>";
+        tr.append(modify);
+    });
+    $('#stuDataBody').after("<tbody><td colspan='10' class='text-center'><button class='btn btn-info' id ='backBtn' onclick='back()'>返回显示所有数据</button></td></tbody>");
+}
+
+function back() {
+    window.location.reload();
+}
+
 function main() {
     let median = 0;
     let aver = 0;
@@ -195,6 +236,7 @@ function main() {
         }
     });
     $('#modifyStu').click(modify);
+    $('#queryId').click(queryData);
 }
 
 main();
