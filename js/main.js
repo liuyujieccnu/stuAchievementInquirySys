@@ -15,10 +15,10 @@ class Student {
     }
 }
 
-function uniqueId(input){
+function uniqueId(input) {
     let students = JSON.parse(localStorage.getItem('students'));
-    for(let item of students){
-        if(item.id===input.id){
+    for (let item of students) {
+        if (item.id === input.id) {
             return false;
         }
     }
@@ -31,7 +31,7 @@ function verifyInputs(input) {
         errId.push($('#inputName'));
         errId.push($('#modifyName'));
     }
-    if (input.id < 0 || input.id.length === 0 || uniqueId(input)===false) {
+    if (input.id < 0 || input.id.length === 0 || uniqueId(input) === false) {
         errId.push($('#inputId'));
         errId.push($('#modifyId'));
     }
@@ -179,7 +179,7 @@ function modify() {
 function delData(tar) {
     let students = JSON.parse(localStorage.getItem('students'));
     let tarID = tar.parentElement.parentElement.children[1].innerText;
-    let message = confirm('警告：确定要删除 ' + tar.parentElement.parentElement.children[0].innerText + tarID +' 同学的数据吗？');
+    let message = confirm('警告：确定要删除 ' + tar.parentElement.parentElement.children[0].innerText + tarID + ' 同学的数据吗？');
     if (message) {
         localStorage.removeItem('students');
         let delNo = 0;
@@ -239,10 +239,14 @@ function queryData() {
                 }
             }
         }
+        let queryAvr = clazzAver(queryStudents);
+        let queryMedian = clazzMedian(queryStudents);
         $('#stuDataBody tr').remove();
         if ($('#queryRes')) {
             $('#queryRes').remove();
             $('#queryBack').remove();
+            $('#queryAvr').remove();
+            $('#queryMedian').remove();
         }
         if (queryStudents.length === 0) {
             $('#stuDataBody').before("<tbody><td colspan='10' class='text-center' id='queryRes'>没有找到任何学生！</td></tbody>");
@@ -250,7 +254,9 @@ function queryData() {
             $('#stuDataBody').before("<tbody><td colspan='10' class='text-center' id='queryRes'>以下为查询结果</td></tbody>");
         }
         tableDisplay(queryStudents);
-        $('#stuDataBody').after("<tbody><td colspan='10' class='text-center' id='queryBack'><button class='btn btn-info' id ='backBtn' onclick='window.location.reload()'>返回显示所有数据</button></td></tbody>");
+        $('#stuDataBody').after("<tbody><tr id='queryBack'><td colspan='10' class='text-center' ><button class='btn btn-info' id ='backBtn' onclick='window.location.reload()'>返回显示所有数据</button></td></tr></tbody>");
+        $('#queryBack').before("<tr><td colspan='10' class='text-center' id='queryAvr'>以上学生的平均分为：" + queryAvr + "</td></tr>");
+        $('#queryBack').before("<tr><td colspan='10' class='text-center' id='queryMedian'>以上学生的中位分为：" + queryMedian + "</td></tr>");
         $('#queryData').modal('hide');
     }
 }
@@ -277,11 +283,11 @@ function main() {
     $('#modifyStu').click(modify);
     $('#queryId').click(queryData);
     $('#inputStuId').keydown(function (event) {
-        if(event && event.keyCode === 13){
+        if (event && event.keyCode === 13) {
             queryData();
         }
     });
-    return ;
+    return;
 }
 
 main();

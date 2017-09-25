@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec79630f-a654-4fb7-bfb1-73f8f4a78f80" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,8 +22,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="-796">
+              <caret line="5" column="82" lean-forward="false" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
               <folding>
                 <element signature="e#1112#1119#1" expanded="true" />
                 <element signature="n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="95" column="1" lean-forward="false" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+            <state relative-caret-position="318">
+              <caret line="256" column="197" lean-forward="false" selection-start-line="256" selection-start-column="197" selection-end-line="256" selection-end-column="197" />
               <folding>
                 <element signature="n#Student#0" expanded="false" />
                 <element signature="n#!!block;n#uniqueId#0" expanded="false" />
@@ -50,15 +50,28 @@
                 <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
                 <element signature="n#!!block;n#dealErr#0" expanded="false" />
                 <element signature="n#!!block;n#add#0" expanded="false" />
-                <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
                 <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
                 <element signature="n#!!block;n#modify#0" expanded="false" />
                 <element signature="n#!!block;n#delData#0" expanded="false" />
                 <element signature="n#!!block;n#verifyId#0" expanded="false" />
                 <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-                <element signature="n#!!block;n#queryData#0" expanded="false" />
                 <element signature="n#!!block;n#main#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -191,17 +204,18 @@
       <workItem from="1506217672149" duration="5234000" />
       <workItem from="1506224796451" duration="314000" />
       <workItem from="1506241307115" duration="4166000" />
-      <workItem from="1506301538726" duration="4760000" />
+      <workItem from="1506301538726" duration="5794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58962000" />
+    <option name="totallyTimeSpent" value="59996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11040508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11040508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -268,13 +282,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
@@ -308,13 +320,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
@@ -332,13 +342,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
@@ -380,13 +388,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
@@ -428,13 +434,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
@@ -500,13 +504,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
@@ -548,13 +550,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
@@ -596,13 +596,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
@@ -644,13 +642,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
@@ -692,13 +688,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
@@ -712,10 +706,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="-796">
+          <caret line="5" column="82" lean-forward="false" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
           <folding>
             <element signature="e#1112#1119#1" expanded="true" />
             <element signature="n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -730,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="95" column="1" lean-forward="false" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+        <state relative-caret-position="318">
+          <caret line="256" column="197" lean-forward="false" selection-start-line="256" selection-start-column="197" selection-end-line="256" selection-end-column="197" />
           <folding>
             <element signature="n#Student#0" expanded="false" />
             <element signature="n#!!block;n#uniqueId#0" expanded="false" />
@@ -740,13 +747,11 @@
             <element signature="n#!!block;n#clazzMedian#0" expanded="false" />
             <element signature="n#!!block;n#dealErr#0" expanded="false" />
             <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#dataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modifyDataDisplay#0" expanded="false" />
             <element signature="n#!!block;n#modify#0" expanded="false" />
             <element signature="n#!!block;n#delData#0" expanded="false" />
             <element signature="n#!!block;n#verifyId#0" expanded="false" />
             <element signature="n#!!block;n#tableDisplay#0" expanded="false" />
-            <element signature="n#!!block;n#queryData#0" expanded="false" />
             <element signature="n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
