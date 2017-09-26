@@ -16,10 +16,12 @@ class Student {
 }
 
 function uniqueId(input) {
-    let students = JSON.parse(localStorage.getItem('students'));
-    for (let item of students) {
-        if (item.id === input.id) {
-            return false;
+    if (JSON.parse(localStorage.getItem('students'))) {
+        let students = JSON.parse(localStorage.getItem('students'));
+        for (let item of students) {
+            if (item.id === input.id) {
+                return false;
+            }
         }
     }
     return true;
